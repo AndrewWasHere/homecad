@@ -3,7 +3,12 @@
     Andrew Lin, December 2021.
 */
 
-// Settings (all dimensions in mm).
+/*
+    Settings (all dimensions in mm).
+    Note: The minkowski transformation will increase the actual
+    dimensions of the tray by twice the curve radius.
+*/
+
 length = 80;
 width = 50;
 hole_width = 10;
@@ -11,7 +16,7 @@ min_hole_spacing = 1;
 face_height = 5;
 leg_height = 10;
 leg_thickness = 3;
-curve_radius = 2.5;
+curve_radius = 3;
 
 module leg(r, t, h) {
     linear_extrude(h) {
