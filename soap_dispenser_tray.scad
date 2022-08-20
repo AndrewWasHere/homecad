@@ -9,8 +9,8 @@
     dimensions of the tray by twice the curve radius.
 */
 
-length = 80;
-width = 50;
+length = 100;
+width = 65;
 hole_width = 10;
 min_hole_spacing = 1;
 face_height = 5;
@@ -28,6 +28,11 @@ module leg(r, t, h) {
             translate([-t, -t, 0]) square(3 * r + t, center = true);
         }
     }
+}
+
+module center_leg(l, w, h) {
+    linear_extrude(h)
+        square([l, w], center = true);
 }
 
 module holes(l, w, d, b) {
